@@ -1,5 +1,6 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
+<<<<<<< HEAD
 <?php
 if (session()->getFlashData('success')) {
 ?>
@@ -33,4 +34,20 @@ if (session()->getFlashData('success')) {
     <?php endforeach ?>
 </div>
 <!-- End Table with stripped rows -->
+=======
+ <!-- Table with stripped rows -->
+ <div class="row">
+    <?php foreach ($product as $key => $item) : ?>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <img src="<?php echo base_url() . "img/" . $item['foto'] ?>" alt="..." width="100%">
+                    <h5 class="card-title"><?php echo $item['nama'] ?><br><?php echo $item['harga'] ?></h5>
+                </div>
+            </div>
+        </div>
+    <?php endforeach ?>
+</div>
+  <!-- End Table with stripped rows -->
+>>>>>>> e336e8f32aa66d4f0248cef27b291a074be451fa
 <?= $this->endSection() ?>

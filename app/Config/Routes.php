@@ -11,6 +11,7 @@ $routes->get('/', 'Home::index', ['filter' => 'auth']);
 $routes->get('login', 'AuthController::login');
 $routes->post('login', 'AuthController::login');
 $routes->get('logout', 'AuthController::logout');
+
 $routes->group('produk', ['filter' => 'auth'], function ($routes) { 
     $routes->get('', 'ProdukController::index');
     $routes->post('', 'ProdukController::create');
@@ -24,5 +25,6 @@ $routes->group('keranjang', ['filter' => 'auth'], function ($routes) {
     $routes->post('edit', 'TransaksiController::cart_edit');
     $routes->get('delete/(:any)', 'TransaksiController::cart_delete/$1');
     $routes->get('clear', 'TransaksiController::cart_clear');
+
 });
 $routes->get('keranjang', 'TransaksiController::index', ['filter' => 'auth']);

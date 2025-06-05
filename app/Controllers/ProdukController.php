@@ -85,6 +85,7 @@ class ProdukController extends BaseController
     
         return redirect('product')->with('success', 'Data Berhasil Dihapus');
     }
+
     public function download()
 {
 		//get data from database
@@ -111,5 +112,6 @@ class ProdukController extends BaseController
     // output the generated pdf
     $dompdf->stream($filename);
 }
+
 
 }
