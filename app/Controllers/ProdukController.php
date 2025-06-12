@@ -85,6 +85,7 @@ class ProdukController extends BaseController
     
         return redirect('product')->with('success', 'Data Berhasil Dihapus');
     }
+
     public function download()
 {
 		//get data from database
